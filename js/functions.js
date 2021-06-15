@@ -59,7 +59,7 @@ function saibaMais(obj) {
         var img = imgPessoal
         var titulo = tituloPessoal
         var botao = botaoPessoal 
-    }else if(obj.id === "profissional_saiba"){
+    }else if(obj.id === "profi_saiba"){
         var banner = bannerProfi;
         var u = profi;
         var img = imgProfi
@@ -80,7 +80,11 @@ function saibaMais(obj) {
 
 function fecharBanner(obj) {
     var banner = document.getElementsByClassName('banner')
-    var viagem = document.getElementsByClassName('viagem')
+
+    var bannerViagem = document.getElementsByClassName('viagem')
+    var bannerPessoal = document.getElementsByClassName('pessoal')
+    var bannerProfi = document.getElementsByClassName('profissional')
+
     var imgViagem = document.getElementById("img_viagem")
     var tituloViagem = document.getElementById("titulo_viagem")
     
@@ -89,43 +93,71 @@ function fecharBanner(obj) {
     
     var imgProfi = document.getElementById("img_profi")
     var tituloProfi = document.getElementById("titulo_profi")
+
     var botaoViagem = document.getElementById("viagem_saiba")
     var botaoPessoal = document.getElementById("pessoal_saiba")
-    var botaoProfi = document.getElementById("profissional_saiba")
+    var botaoProfi = document.getElementById("profi_saiba")
+    
     var brasil = document.getElementsByClassName("brasil")
     var canada = document.getElementsByClassName("canada")
     var america = document.getElementsByClassName("america")
     var outro = document.getElementsByClassName("outro")
+    var pessoal = document.getElementsByClassName("sonho_pessoal")
+    var profi = document.getElementsByClassName("sonho_profi")
 
     if (obj.id === "fechar_brasil") {
         var u = brasil
+        var b = bannerViagem
         var botao = botaoViagem 
         var img = imgViagem
         var titulo = tituloViagem
-        var botao = botaoViagem 
+        
     } else if (obj.id === "fechar_canada") {
         var u = canada
+        var b = bannerViagem
+        var botao = botaoViagem 
+        var img = imgViagem
+        var titulo = tituloViagem
+        
     } else if (obj.id === "fechar_america") {
         var u = america
+        var b = bannerViagem
+        var botao = botaoViagem 
+        var img = imgViagem
+        var titulo = tituloViagem
+        
     } else if (obj.id === "fechar_outro") {
         var u = outro
+        var b = bannerViagem
+        var botao = botaoViagem 
+        var img = imgViagem
+        var titulo = tituloViagem
+        
     } else if (obj.id === "fechar_pessoal") {
-        var u = america
+        var u = pessoal
+        var b = bannerPessoal
+        var botao = botaoPessoal 
+        var img = imgPessoal
+        var titulo = tituloPessoal
+        
     } else if (obj.id === "fechar_profi") {
-        var u = outro
+        var u = profi
+        var b = bannerProfi
+        var botao = botaoProfi
+        var img = imgProfi
+        var titulo = tituloProfi
+       
     }
 
     for (var i = 0; i < banner.length; i++) {
         img.style.display = "flex"
         titulo.style.display = "flex"
         botao.style.display = "flex"
-        banner[i].style.display = "flex"
-        viagem[i].style.display = "flex"
+        b[i].style.display = "flex"
         u[i].style.display = "none"
         banner[i].style.justifyContent = "center";
     }
 
-    botao[1].style.display = "none"
 }
 
 function proximoPais(obj) {
