@@ -94,11 +94,6 @@ footer{
     font-size: 2vw;
 }
 
-.pais ul{
-  text-align:center; 
-  list-style: none;
-}
-
 .btn_viagem:hover{
     box-shadow: inset 150px 0 0 0 #407BFF ;
 }
@@ -137,7 +132,7 @@ footer{
     margin-bottom: 100px;
 }
 
-.pais .botoes{
+.dados .botoes{
     flex-direction : row;
 }
 
@@ -150,6 +145,12 @@ footer{
     
 } 
 
+@media(max-width: 910px){
+    .botoes{
+        flex-direction: column;
+        top: 0;
+    }
+}
 
 @media (max-width: 720px) {
     
