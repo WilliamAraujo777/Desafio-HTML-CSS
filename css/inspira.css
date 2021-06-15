@@ -64,8 +64,10 @@ footer{
     transition: 0.5s;
 }
 
-.inspi:hover{  
+.inspi:hover p{  
     text-decoration: underline;
+    color: #407BFF;
+    text-underline-offset: 0.7em;
 }
 
 
