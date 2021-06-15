@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/sonho.css">
+   
+    <title>Sonhos</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="entrete.html">Entretenimento</a></li>
+                <li><a href="inspira.html">Inspirações</a></li>
+                <li><a href="sonho.html">Sonhos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="conteudo">
+        <div class="banner viagem">
+            <p id="titulo_viagem">VIAGENS</p>
+            <button id="viagem_saiba" class="saiba_mais btnPadrao btn_viagem" onclick="saibaMais(this)">Saiba Mais!</button>
+            <img id="img_viagem" src="../img/feria.svg">
+            <div class="brasil pais">
+                <button id="fechar_brasil" class="botaoFechar btnPadrao btn_viagem"
+                    onclick="fecharBanner(this)">Fechar</button>
+                <h2 id="titulo">Brasil</h2>
+                <ul>
+                    <li>Lençóis Marenhenses - Maranhão</li>
+                    <li>Porto de Galinhas - Pernambuco</li>
+                    <li>Elevador Lacerda - Salvador</li>
+                </ul>
+                <div class="botoes">
+                    <button id="anterior_brasil" class="botaoAnterior btnPadrao btn_viagem"
+                        onclick="proximoPais(this)">Anterior</button>
+                    <button id="imagens_brasil" class="botaoImagem btnPadrao btn_viagem"
+                    data-bs-toggle="modal" data-bs-target="#modalBrasil">Imagens</button>
+                    <button id="proximo_brasil" class="botaoProximo btnPadrao btn_viagem"
+                        onclick="proximoPais(this)">Proximo</button>
+                </div>
+            </div>
+            <div class="canada pais">
+                <button id="fechar_canada" class=" botaoFechar btnPadrao btn_viagem"
+                    onclick="fecharBanner(this)">Fechar</button>
+                <h2 id="titulo">Canada</h2>
+                <ul>
+                    <li>Montreal</li>
+                    <li>Vancouver</li>
+                    <li>Toronto</li>
+                </ul>
+                <div class="botoes">
+                    <button id="anterior_canada" class="botaoAnterior btnPadrao btn_viagem"
+                        onclick="proximoPais(this)">Anterior</button>
+                    <button id="imagens_canada" class="botaoImagem btnPadrao btn_viagem"
+                    data-bs-toggle="modal" data-bs-target="#modalCanada">Imagens</button>
+                    <button id="proximo_canada" class="botaoProximo btnPadrao btn_viagem"
+                        onclick="proximoPais(this)">Proximo</button>
+                </div>
+            </div>
+            <div class="america pais">
+                <button id="fechar_america" class="botaoFechar btnPadrao btn_viagem"
+                    onclick="fecharBanner(this)">Fechar</button>
+                <h2 id="titulo">América do Sul</h2>
+                <ul>
+                    <li>Ilhas Galapagos, Equador</li>
+                    <li>Macchu Pichuu, Peru </li>
+                    <li>Ilha de Páscoa, Chile </li>
+                </ul>
+                <div class="botoes">
+                    <button id="anterior_america" class="botaoAnterior btnPadrao btn_viagem"
+                        onclick="proximoPais(this)">Anterior</button>
+                    <button id="imagens_america" class="botaoImagem btnPadrao btn_viagem"
+                    data-bs-toggle="modal" data-bs-target="#modalAmerica">Imagens</button>
+                    <button id="proximo_america" class="botaoProximo btnPadrao btn_viagem"
+                        onclick="proximoPais(this)">Proximo</button>
+                </div>
+            </div>
+            <div class="outro pais">
+                <button id="fechar_outro" class="botaoFechar btnPadrao btn_viagem"
+                    onclick="fecharBanner(this)">Fechar</button>
+                <h2 id="titulo">Outros Países</h2>
+                <ul>
+                    <li>Grécia</li>
+                    <li>Italia</li>
+                    <li>França</li>
+                </ul>
+                <div class="botoes">
+                    <button id="anterior_outro" class="botaoAnterior btnPadrao btn_viagem"
+                        onclick="proximoPais(this)">Anterior</button>
+                    <button id="imagens_outro" class="botaoImagem btnPadrao btn_viagem"
+                    data-bs-toggle="modal" data-bs-target="#modalOutro">Imagens</button>
+                    <button id="proximo_outro" class="botaoProximo btnPadrao btn_viagem"
+                        onclick="proximoPais(this)">Proximo</button>
+                </div>
+            </div>
+        </div>
+        <div class="pessoal banner">
+            <p id="titulo_pessoal">PESSOAL</p>
+            <button id="pessoal_saiba" class="saiba_mais btnPadrao btn_pessoal" onclick="saibaMais(this)">Saiba Mais!</button>
+            <img id="img_pessoal" src="../img/feria.svg" alt="">
+
+            <div class="sonho_pessoal pais">
+                <button id="fechar_brasil" class="botaoFechar btnPadrao btn_viagem"
+                    onclick="fecharBanner(this)">Fechar</button>
+                <h2 id="titulo">Alguns Sonhos Pessoais</h2>
+                <ul>
+                    <li>Viajar para muitos paises!</li>
+                    <li>Não deixar de ser eu mesmo</li>
+                    <li>Morar proximo ao campo</li>
+                    <li>Me formar na area que amo</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="profissional banner">
+            <p class="titulo_profi">PROFISSIONAL</p>
+            <button id="profi_saiba" class="saiba_mais btnPadrao btn_profissional" onclick="saibaMais()">Saiba Mais!</button>
+
+            <img class="img_profi" src="../img/profissional.svg" alt="">
+            <div class="sonho_profi pais">
+                <button id="fechar_brasil" class="botaoFechar btnPadrao btn_viagem"
+                    onclick="fecharBanner(this)">Fechar</button>
+                <h2 id="titulo">Alguns Sonhos Pessoais</h2>
+                <ul>
+                    <li>Viajar para muitos paises!</li>
+                    <li>Não deixar de ser eu mesmo</li>
+                    <li>Morar proximo ao campo</li>
+                    <li>Me formar na area que amo</li>
+                </ul>
+            </div>  
+        </div>
+    
+        <!--MODDAL IMAGENS VIAGENS-->
+        <div class="modal fade" id="modalBrasil" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Brasil</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="../img/lencois.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                              <h1>Lençóis Marenhenses</h1>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../img/portogalinha.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                              <h1>Porto de Galinhas</h1>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../img/elevador-lacerda.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                              <h1>Elevador Lacerda</h1>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Proximo</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Anterior</span>
+                        </button>
+                      </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="modalCanada" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Canada</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="slideCanada" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="../img/montreal.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                              <h1>Montreal</h1>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../img/vancouver.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                              <h1>Vancouver</h1>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../img/toronto.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                              <h1>Toronto</h1>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#slideCanada" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Proximo</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#slideCanada" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Anterior</span>
+                        </button>
+                      </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="modalAmerica" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">América do Sul</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="slideAmerica" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="../img/galapagos.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                              <h1>Ilhas Galapagos</h1>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../img/pichu.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                              <h1>Macchu Pichuu</h1>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../img/pascoa.png" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                              <h1>Ilha de Páscoa</h1>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#slideAmerica" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Proximo</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#slideAmerica" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Anterior</span>
+                        </button>
+                      </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="modalOutro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Outros Países</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="slideOutro" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="../img/grecia.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                              <h1>Grécia</h1>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../img/italia.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                              <h1>Itália</h1>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../img/franca.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                              <h1>França</h1>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#slideOutro" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Proximo</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#slideOutro" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Anterior</span>
+                        </button>
+                      </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+    </div>
+    <footer>
+        <p>©Todos os direitos reservados a J1W - 2021</p>
+    </footer>
+    <script src="../js/functions.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+</body>
+</html>

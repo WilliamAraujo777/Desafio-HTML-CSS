@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Viaoda Libre', cursive;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    transition: 0.5s;
+}
+
+a:hover{
+    color: rgb(158, 14, 14);
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    background-color: black;
+}
+
+nav{
+    float: right;
+    padding: 30px;
+}
+
+ul li{
+    list-style: none;
+    color: white;
+    float: left;
+    font-size: 20px;
+    margin-left: 25px;
+    font-weight: 700;
+}
+
+footer{
+    width: 100%;
+    height: 100px;
+    color: white;
+    padding-top: 30px;
+    font-weight: 700;
+    text-align: center;
+    background-color: black;
+}
+
+.conteudo{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+}
+
+.conteudo img{
+    width: 36vw;
+}
+
+
+
+.parte, .parte-reversa{
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    margin-bottom: 70px;
+}
+    #img{
+        width: 39%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    #texto{
+        width: 50%;     
+        font-size: 2.2vw;
+        font-weight: 700;
+        margin: 5px;
+        text-align: justify;
+    }
+    
+ .parte-reversa{
+    flex-direction: row-reverse;
+}   
+    
+/*Banner*/
+.banner p{
+    align-self: flex-end;
+    margin: 40px;
+    font-size: 6vw;
+    font-weight: 500; 
+    text-decoration: underline;
+    color: white;
+}
+
+.banner img{
+    align-self: center;
+    width: 200px;
+}
+
+.banner{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 200px;
+    cursor:pointer;
+}
+
+ .banner:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    /* transition: 1s;  */
+    text-underline-offset: 0.7em;
+} 
+
+.hq .banner{
+    background-color: rgb(148, 52, 53);
+}
+
+.jogo .banner{
+    background-color: rgb(246, 102, 36);
+}
+
+.desenho .banner{
+    background-color: rgb(19, 195, 244);
+}
+
+.filme .banner{
+    background-color: rgb(121, 120, 121);
+}
+
+
+
+/*Responsivo*/
+@media (max-width: 720px) {
+    .parte, .parte-reversa{
+        flex-direction: column;
+    }
+
+    .banner{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .banner p{
+        align-self: center;
+    }
+
+    #texto{
+        font-size:4.4vw;
+        text-align: center;
+        width: 70%;
+    }
+
+}
+
+

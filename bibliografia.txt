@@ -1,0 +1,7 @@
+BIBLIOGRAFIA;
+https://www.w3schools.com/css/css_grid.asp
+https://www.w3schools.com/cssref/pr_grid-template-areas.asp
+https://www.youtube.com/watch?v=tBAH2PmzM8M
+https://br.pinterest.com/pin/799459371332306866/?d=t&mt=login
+https://getbootstrap.com/docs/5.0/components/modal/
+https://www.youtube.com/watch?v=MLfAW55_4cY
